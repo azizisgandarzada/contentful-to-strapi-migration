@@ -1,0 +1,19 @@
+{
+  "spaceId": "***",
+  "environmentId": "master",
+  "deliveryToken": "****",
+  "exportDir": "/Users/azizisgandarzada/Projects/Java/contentful-to-strapi-migration/src/main/resources/export",
+  "saveFile": true,
+  "contentFile": "export.json",
+  "includeDrafts": false,
+  "includeArchived": false,
+  "skipContentModel": false,
+  "skipEditorInterfaces": false,
+  "skipContent": false,
+  "contentOnly": false,
+  "skipRoles": true,
+  "skipWebhooks": true,
+  "downloadAssets": true,
+  "maxAllowedLimit": 1000,
+  "errorLogFile": "/Users/azizisgandarzada/Projects/Java/contentful-to-strapi-migration/src/main/resources/export/error.log"
+}

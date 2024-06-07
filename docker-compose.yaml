@@ -1,0 +1,28 @@
+services:
+  migration-db:
+    container_name: migration_db
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: migration_db
+      PGDATA: /var/lib/migration_postgres_db/data
+    volumes:
+      - migration_postgres_db:/var/lib/migration_postgres_db/data
+    ports:
+      - "5433:5432"
+  strapi-db:
+    container_name: strapi_db
+    image: postgis/postgis
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: strapi_db
+      PGDATA: /var/lib/strapi_postgres_db/data
+    volumes:
+      - strapi_postgres_db:/var/lib/strapi_postgres_db/data
+    ports:
+      - "5432:5432"
+volumes:
+  migration_postgres_db:
+  strapi_postgres_db:

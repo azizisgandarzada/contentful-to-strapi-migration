@@ -1,0 +1,27 @@
+contentful:
+  default-locale: en-US
+  other-locales: az
+  skipped-content-type-ids: toggles
+logging:
+  level:
+    az.abb: debug
+spring:
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            connectTimeout: ${DEFAULT_CLIENT_CONNECT_TIMEOUT:5000}
+            readTimeout: ${DEFAULT_CLIENT_READ_TIMEOUT:20000}
+            loggerLevel: ${DEFAULT_CLIENT_LOGGER_LEVEL:full}
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5433}/${DB_NAME:migration_db}
+    username: ${DB_USERNAME:user}
+    password: ${DB_PASSWORD:password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+

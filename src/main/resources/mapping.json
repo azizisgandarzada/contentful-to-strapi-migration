@@ -1,0 +1,16 @@
+{
+  "products": {
+    "pluralName": "service-points",
+    "fields": {
+      "name": "name",
+      "address": "address",
+      "image": "image",
+      "description": "description",
+      "id": "identifier,",
+      "metadata": "metadata",
+      "test&af": "testAf",
+      "userId": "userId",
+      "LongText": "longText"
+    }
+  }
+}
